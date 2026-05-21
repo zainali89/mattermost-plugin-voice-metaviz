@@ -77,8 +77,9 @@ export default class Client {
                 const data = {
                     channel_id: channelId,
                     root_id: rootId,
-                    message: 'Voice Message',
+                    message: '🎤 Voice Message',
                     type: 'custom_voice',
+                    file_ids: [res.body.file_infos[0].id],
                     props: {
                         fileId: res.body.file_infos[0].id,
                         duration: recording.duration,
